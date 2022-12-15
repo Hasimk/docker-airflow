@@ -79,6 +79,8 @@ COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
 EXPOSE 8080
+ENV PORT 8080
+ENV HOST 0.0.0.0
 
 USER airflow
 WORKDIR ${AIRFLOW_USER_HOME}
